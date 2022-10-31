@@ -1,6 +1,7 @@
-from enum import Enum, auto
+from enum import auto
+from strenum import LowercaseStrEnum
 
 
-class SpaceStates(Enum):
-    live = auto()
-    scheduled = auto()
+class SpaceStates(LowercaseStrEnum):
+    LIVE = auto()
+    SCHEDULED = auto()
