@@ -43,6 +43,9 @@ class Spaces:
         self.host_ids = host_ids
         self.id = id
 
+    def slotted_to_dict(self):
+        return {s: getattr(self, s) for s in self.__slots__ if hasattr(self, s)}
+
     # def __repr__(self) -> str:
     #     # TODO
     #     # return the id and name of the space
