@@ -1,11 +1,9 @@
 import os
 
-from dotenv import load_dotenv
-from pathlib import Path
+from dotenv import load_dotenv, find_dotenv
 
-env_path = Path('.')/'.env'
 
-load_dotenv(env_path)
+load_dotenv(find_dotenv())
 
 BEARER_TOKEN = os.getenv("BEARER_TOKEN")
 CONSUMER_KEY = os.getenv("CONSUMER_KEY")

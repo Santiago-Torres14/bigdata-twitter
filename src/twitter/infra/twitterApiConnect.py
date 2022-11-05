@@ -6,12 +6,12 @@ from src.settings import BEARER_TOKEN, ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_SEC
 class TwitterApi(metaclass=metaSingleton.MetaSingleton):
     _apiConnection = None
 
-    def connect(self, BEARER_TOKEN: str, CONSUMER_KEY: str, CONSUMER_SECRET: str, ACCESS_TOKEN: str,
-                ACCESS_SECRET: str):
+    def connect(self, bearer_token: str, consumer_key: str, consumer_secret: str, access_token: str,
+                access_secret: str):
         if self._apiConnection is None:
-            self._apiConnection = tweepy.Client(bearer_token=BEARER_TOKEN, consumer_key=CONSUMER_KEY,
-                                                consumer_secret=CONSUMER_SECRET, access_token=ACCESS_TOKEN,
-                                                access_token_secret=ACCESS_SECRET)
+            self._apiConnection = tweepy.Client(bearer_token=bearer_token, consumer_key=consumer_key,
+                                                consumer_secret=consumer_secret, access_token=access_token,
+                                                access_token_secret=access_secret)
 
         return self._apiConnection
 
