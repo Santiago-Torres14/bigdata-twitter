@@ -18,6 +18,10 @@ class Spaces:
     topic_ids: str or None
     title: str
 
+    __slots__ = ['id', 'host_ids', 'created_at', 'creator_id', 'lang', 'is_ticketed', 'invited_user_ids',
+                 'participant_count', 'scheduled_start', 'speaker_ids', 'started_at', 'state', 'topic_ids', 'title',
+                 'ended_at']
+
     def __init__(self, id: str, host_ids: list, created_at: str, creator_id: list[str], lang: str,
                  is_ticketed: bool, invited_user_ids: list, participant_count: int,
                  speaker_ids: list, state: SpaceStates, title: str, ended_at: str or None = None,
