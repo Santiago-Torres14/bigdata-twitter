@@ -19,7 +19,7 @@ class Spaces:
     title: str
 
     def __init__(self, id: str, host_ids: list, created_at: str, creator_id: list[str], lang: str,
-                 is_ticked: bool, invited_user_ids: list, participant_count: int,
+                 is_ticketed: bool, invited_user_ids: list, participant_count: int,
                  speaker_ids: list, state: SpaceStates, title: str, ended_at: str or None = None,
                  started_at: str or None = None, scheduled_start: str or None = None,
                  topic_ids: str or None = None) -> None:
@@ -31,10 +31,15 @@ class Spaces:
         self.scheduled_start = scheduled_start
         self.participant_count = participant_count
         self.invited_user_ids = invited_user_ids
-        self.is_ticketed = is_ticked
+        self.is_ticketed = is_ticketed
         self.lang = lang
         self.ended_at = ended_at
         self.creator_id = creator_id
         self.created_at = created_at
         self.host_ids = host_ids
         self.id = id
+
+    # def __repr__(self) -> str:
+    #     # TODO
+    #     # return the id and name of the space
+    #     pass
