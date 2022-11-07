@@ -10,7 +10,7 @@ class GetSpacesByQueryApp:
 
         spacesDict = list()
         for space in spaces:
-            spaceDict = domain.model.Spaces.slotted_to_dict(space)
+            spaceDict = space.slotted_to_dict()
             spaceDict.update(query=query)
             spacesDict.append(spaceDict)
 

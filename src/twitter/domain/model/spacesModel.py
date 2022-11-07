@@ -1,7 +1,8 @@
+from src.shared import ClassToDict
 from .spaceStatesModel import SpaceStates
 
 
-class Spaces:
+class Spaces(ClassToDict):
     id: str
     host_ids: list
     created_at: str
@@ -43,8 +44,6 @@ class Spaces:
         self.host_ids = host_ids
         self.id = id
 
-    def slotted_to_dict(self):
-        return {s: getattr(self, s) for s in self.__slots__ if hasattr(self, s)}
 
     # def __repr__(self) -> str:
     #     # TODO
