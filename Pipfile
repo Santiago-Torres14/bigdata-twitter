@@ -8,6 +8,7 @@ tweepy = "*"
 pymongo = {extras = ["srv"], version = "*"}
 python-dotenv = "*"
 strenum = "*"
+flask = "*"
 
 [dev-packages]
 
